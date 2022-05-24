@@ -26,6 +26,7 @@ func (schema *Schema) GetField(name string) *Field {
 
 // 使用反射将模型实例解析为Schema实例
 func Parse(dest interface{}, d dialect.Dialect) *Schema {
+	// desc 入参为实例，需要ValueOf获取值（指针）后再用 Indirect 获取对应结构体
 	modelType := reflect.Indirect(reflect.ValueOf(dest)).Type()
 	schema := &Schema{
 		Model:    dest,

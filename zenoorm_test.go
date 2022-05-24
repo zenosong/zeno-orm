@@ -1,6 +1,10 @@
 package zenoorm
 
-import "testing"
+import (
+	"testing"
+
+	_ "github.com/mattn/go-sqlite3"
+)
 
 func TestEngine(t *testing.T) {
 	engine, _ := NewEngine("sqlite3", "zeno.db")
