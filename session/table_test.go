@@ -5,7 +5,6 @@ import (
 )
 
 type User struct {
-	Id   int `zenoorm:"PRIMARY KEY"`
 	Name string
 	Age  int
 }
