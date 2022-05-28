@@ -34,7 +34,6 @@ func genBindVars(num int) string {
 	return strings.Join(vars, ", ")
 }
 
-// INSERT INTO $tableName ($fields)
 func _insert(values ...interface{}) (string, []interface{}) {
 	tableName := values[0]
 	// .(TYPE) 限制访问的数据类型
